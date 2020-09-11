@@ -1,6 +1,6 @@
 name = "Weaving"
 license = "MIT"
-licenselink = "Link to theme's license"
+licenselink = "https://raw.githubusercontent.com/michaelboyles/weaving-theme/master/LICENSE"
 description = "Clean, content-focused personal blog theme"
 homepage = "https://github.com/michaelboyles/weaving-theme"
 tags = ["blog", "responsive"]
@@ -10,4 +10,3 @@ min_version = "0.59.1"
 [author]
     name = "Michael Boyles"
     homepage = "https://boyl.es"
-
