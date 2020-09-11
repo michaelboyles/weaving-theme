@@ -1,0 +1,10 @@
+<head>
+    <title>{{ with .Title }}{{ . }} | {{ end }}{{.Site.Params.title}}</title>
+    <meta charset="utf-8">
+    {{- hugo.Generator -}}
+
+    {{ $sass := resources.Get "css/style.scss" }}
+    {{ $style := $sass | resources.ToCSS }}
+    <link rel="stylesheet" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}" crossorigin="anonymous" type="text/css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous" type="text/css">
+</head>

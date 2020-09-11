@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="{{- site.Language.Lang -}}">
+    {{- partial "head.html" . -}}
+    <body>
+        <div>
+            {{- partial "nav.html" . -}}
+            <ul class="social-icons">
+                {{ range $item := .Site.Params.socialIcons }}
+                <li>
+                    <a href="{{ $item.url }}" rel="me" aria-label="{{ $item.title }}">
+                        <i class="fa {{ $item.icon }}" aria-hidden="true"></i>
+                    </a>
+                </li>
+                {{ end }}
+            </ul>
+        </div>
+
+        {{- block "main" . }}{{- end }}
+    </body>
+</html>
+

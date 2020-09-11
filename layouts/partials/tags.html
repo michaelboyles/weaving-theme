@@ -1,0 +1,5 @@
+<ul class="tags">
+{{- range $index, $el := . -}}
+    <li class="tag"><a href="{{ ( printf "tags/%s/" ( . | urlize ) ) | relLangURL }}">{{ . }}</a></li>
+{{- end -}}
+</ul>
