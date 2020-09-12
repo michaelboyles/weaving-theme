@@ -7,7 +7,7 @@
             <ul class="social-icons">
                 {{ range $item := .Site.Params.socialIcons }}
                 <li>
-                    <a href="{{ $item.url }}" rel="me" aria-label="{{ $item.title }}">
+                    <a href="{{ $item.url }}" rel="me" title="{{ $item.title }}" aria-label="{{ $item.title }}">
                         <i class="fa {{ $item.icon }}" aria-hidden="true"></i>
                     </a>
                 </li>

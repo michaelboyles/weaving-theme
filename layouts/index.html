@@ -1,8 +1,8 @@
 {{ define "main" }}
 {{ $paginator := .Paginate (where .Site.RegularPages "Type" "in" .Site.Params.homepageTypes) }}
 {{ range $paginator.Pages }}
-<article>
-    <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+<article class="{{ .Type }}">
+    <h2 class="title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
     <div class="meta">
         <span class="date">
         {{ if eq .Date.Year now.Year }}
@@ -14,7 +14,7 @@
         {{ with .Page.Params.Tags }}{{ partial "tags.html" . }}{{ end }}
     </div>
     <p class="summary">{{ .Summary }}</p>
-    <a href="{{ .RelPermalink }}">Continue reading</a>
+    <a href="{{ .RelPermalink }}" class="continue-reading">Continue reading</a>
 </article>
 {{ end }}
 <div class="pagination">
