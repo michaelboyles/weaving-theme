@@ -2,7 +2,7 @@
 <html lang="{{- site.Language.Lang -}}">
     {{- partial "head.html" . -}}
     <body>
-        <div>
+        <div class="header">
             {{- partial "nav.html" . -}}
             <ul class="social-icons">
                 {{ range $item := .Site.Params.socialIcons }}
@@ -14,8 +14,9 @@
                 {{ end }}
             </ul>
         </div>
-
+        <div class="main">
         {{- block "main" . }}{{- end }}
+        </div>
     </body>
 </html>
 
