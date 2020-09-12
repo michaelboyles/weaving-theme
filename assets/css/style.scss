@@ -1,3 +1,5 @@
+$almost-black: #222;
+
 .nav {
     list-style: none;
     margin: 0;
@@ -18,12 +20,36 @@
         margin: 0 3px;
 
         i {
-            color: #222;
+            color: $almost-black;
 
             &:hover {
                 color: lightblue;
             }
         }
     }
+}
 
+.tags {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    .tag {
+        display: inline-block;
+        margin-right: 5px;
+
+        a {
+            display: block;
+            padding: 3px 7px;
+
+            background: #dedede;
+            color: $almost-black;
+            text-decoration: none;
+            border-radius: 3px;
+
+            &:hover {
+                background: #c5c5c5;
+            }
+        }
+    }
 }
