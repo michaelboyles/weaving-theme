@@ -1,0 +1,15 @@
+{{ define "main" }}
+<h1>Posts tagged with {{ .Title }}</h1>
+<div class="post-list">
+    {{ range .Data.Pages.GroupByDate "2006" }}
+        <h2 class="year">{{ .Key }}</h2>
+        {{ range .Pages }}
+        <ol class="posts-by-year">
+            <li>
+                <span class="date">{{.Date.Format "Jan 2" }}</span> - <a href="{{ .Permalink }}" title="{{ .Title }}">{{ .Title }}</a>
+            </li>
+        </ol>
+        {{ end }}
+    {{ end }}
+</div>
+{{ end }}
