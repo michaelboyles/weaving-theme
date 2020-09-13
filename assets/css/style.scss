@@ -114,8 +114,13 @@ hr {
 }
 
 .header {
-    .social-icons {
-        margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 20px;
+
+    .nav {
+        margin: 20px 0;
     }
 }
 
