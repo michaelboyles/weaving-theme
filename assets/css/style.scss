@@ -15,6 +15,13 @@ body, html {
     font-family: 'Noto Serif', serif;
 }
 
+sup {
+    vertical-align: top;
+    font-size: 0.7em;
+    position: relative;
+    top: -7px;
+}
+
 a {
     color: $highlight;
     text-decoration: none;
