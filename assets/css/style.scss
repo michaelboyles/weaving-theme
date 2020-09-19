@@ -176,13 +176,6 @@ hr {
     }
 }
 
-.post-list {
-
-    .year {
-
-    }
-
-    .posts-by-year {
-        list-style: none;
-    }
+.post-list .posts-by-year, .taxonomy-list {
+    list-style: none;
 }
