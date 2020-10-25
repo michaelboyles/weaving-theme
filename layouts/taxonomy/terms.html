@@ -1,9 +1,9 @@
 {{ define "main" }}
 <h1>All {{ lower .Title }}</h1>
 <ol class="taxonomy-list">
-    {{ range .Pages }}
+    {{ range .Data.Terms.Alphabetical }}
     <li>
-        <a href="{{ .Permalink }}" title="{{ .Title }}">{{ .Title }}</a>
+	    <a href="{{ .Page.Permalink }}" title="{{ .Page.Title }}">{{ .Page.Title }}</a> &ndash; {{ .Count }} post{{ if gt .Count 1 }}s{{end}} 
     </li>
     {{ end }}
 </ol>
