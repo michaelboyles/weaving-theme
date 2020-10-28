@@ -78,10 +78,17 @@ hr {
     border-left: 3px solid $highlight;
     background-color: $almost-white;
     padding: 25px 0 25px 30px;
+    overflow-x: auto;
 
     pre {
         margin: 0;
         background: none !important;
+        float: left;
+
+        code {
+            display: block;
+            margin-right: 25px;
+        }
     }
 }
 
@@ -122,6 +129,11 @@ hr {
     .main, .header {
         width: 100%;
         box-sizing: border-box;
+    }
+
+    .highlight {
+        font-size: 0.8em;
+        line-height: 1.4em;
     }
 }
 
