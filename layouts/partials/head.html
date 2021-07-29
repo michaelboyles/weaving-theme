@@ -2,6 +2,11 @@
     <title>{{ with .Title }}{{ . }} | {{ end }}{{.Site.Params.title}}</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    {{ if (eq .Kind "term")}}
+        <meta name="description" content="All posts tagged with {{ .Title }}">
+    {{ else if (isset .Params "description") }}
+        <meta name="description" content="{{ .Params.description }}">
+    {{ end }}
     {{- hugo.Generator -}}
 
     {{ $sass := resources.Get "css/style.scss" }}
