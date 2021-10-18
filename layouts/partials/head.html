@@ -14,4 +14,15 @@
     <link rel="stylesheet" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}" crossorigin="anonymous" type="text/css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous" type="text/css">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+    {{ if isset .Site.Params "flamewarsapiurl" }}
+        <script>
+            __FLAMEWARS_CONFIG = {
+                awsUrl: '{{ index .Site.Params "flamewarsapiurl" }}',
+                googleClientId: '{{ index .Site.Params "googleclientid" }}'
+            };
+        </script>
+        {{ $fw := resources.Get "js/flamewars.js" }}
+        <script defer language="javascript" type="text/javascript" src="{{ $fw.Permalink }}" integrity="{{ $style.Data.Integrity }}" ></script>
+    {{ end }}
 </head>
