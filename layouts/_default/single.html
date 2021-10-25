@@ -4,7 +4,6 @@
     {{ if eq .Type "post"}}
     <div class="meta">
         <span class="date">{{ .Date.Format "2 January 2006" }}</span>
-        <span class="reading-time">{{ i18n "reading_time" .ReadingTime }}</span>
         {{ with .Page.Params.Tags }}{{ partial "tags.html" . }}{{ end }}
         {{ if isset .Site.Params "flamewarsapiurl" }}
             <a href="#comments" class="num-comments">Comments</a>
