@@ -12,8 +12,10 @@
     {{ end }}
     <div class="content">{{ .Content }}</div>
     {{ if isset .Site.Params "flamewarsapiurl" }}
-        <hr />
-        <div id="comments"></div>
+        {{ if eq .Type "post"}}
+            <hr />
+            <div id="comments"></div>
+        {{ end }}
     {{ end }}
 </div>
 {{ end }}
